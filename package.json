@@ -1,7 +1,7 @@
 {
-  "name": "generator-simple-redux",
+  "name": "shopping-cart",
   "version": "1.0.0",
-  "description": "My simple redux application.",
+  "description": "Simple redux shopping-cart.",
   "scripts": {
     "clean": "rimraf dist",
     "build:webpack": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
@@ -12,10 +12,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tsaiDavid/simple-redux-boilerplate.git"
+    "url": "git+https://kriskate@github.com/kriskate/r3pi-cart.git"
   },
   "license": "MIT",
-  "homepage": "https://github.com/tsaiDavid/simple-redux-boilerplate",
+  "homepage": "https://kriskate.github.io/cart/",
   "devDependencies": {
     "autoprefixer": "^6.3.1",
     "babel-core": "^6.3.15",
