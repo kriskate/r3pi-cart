@@ -8,8 +8,7 @@ let defaultState = {
     {type: "Papaya", price: 50},
   ],
   itemsInCart:[
-    {type: "Apple", price: 25},
-    // populated at runtime by user or from localStorage
+    // populated at runtime by user and/ or from localStorage
   ],
 }
 

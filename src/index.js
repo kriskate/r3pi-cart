@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { loadItems, saveItems } from './utils/localStorage'
 /**
  * Import the stylesheet you want used! Here we just reference
  * the main SCSS file we have in the styles directory.
@@ -13,7 +14,12 @@ import './styles/main.scss';
 import { configureStore } from './store/configureStore';
 import { Root } from './containers/Root';
 
-const store = configureStore();
+console.log(loadItems())
+const store = configureStore(loadItems());
+
+store.subscribe(() => {
+  saveItems(store.getState())
+})
 
 ReactDOM.render(
   <Root store={store} />,
