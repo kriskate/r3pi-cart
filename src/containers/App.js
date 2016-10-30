@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as Actions from '../actions';
 import AvailableItems from '../containers/AvailableItems';
-import Cart from '../components/Cart';
+import Cart from './Cart';
 
 class App extends Component {
   render() {
@@ -15,7 +15,7 @@ class App extends Component {
         <br/>
         <AvailableItems items={availableItems} actions={actions} />
         <br/>
-        <Cart items={itemsInCart} />
+        <Cart items={itemsInCart} actions={actions} />
       </div>
     );
   }

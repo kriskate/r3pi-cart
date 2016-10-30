@@ -6,7 +6,7 @@ export default class Item extends Component {
     return (
       <div>
         <span>{value.type} - </span>
-        <span>price: {value.price}"ct"</span>
+        <span>price: {value.price} <b>ct</b></span>
         <button onClick={() => addItem(value)}>add to cart</button>
       </div>
     );

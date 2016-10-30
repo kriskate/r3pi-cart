@@ -8,6 +8,7 @@ let defaultState = {
     {type: "Papaya", price: 50},
   ],
   itemsInCart:[
+    {type: "Apple", price: 25},
     // populated at runtime by user or from localStorage
   ],
 }
@@ -21,14 +22,14 @@ if(localItems){
 export default function items(state = defaultState, action) {
   switch (action.type) {
   case ADD_ITEM:
-    return Object.combine({}, state, { itemsInCart: [...state.itemsInCart, action.payload] });
+    return Object.assign({}, state, { itemsInCart: [...state.itemsInCart, action.payload] });
   case REMOVE_ITEM:
     let item = action.payload
     let arr = state.itemsInCart
-    arr.splice(arr.indexOf(item))
+    arr.splice(arr.indexOf(arr.find((i) => i.type===item.type)),1)
 
     // this is done just to let redux know the state is modified
-    return Object.combine({}, state, { itemsInCart: arr });
+    return Object.assign({}, state, { itemsInCart: [...arr] });
   default:
     return state;
   }
